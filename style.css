@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: neu;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page1 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  position: relative;
+  padding: 0 2vw;
+}
+
+nav {
+  padding: 2vw, 0vw;
+  height: 100px;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  position: relative;
+  align-items: center;
+  z-index: 100;
+  justify-content: space-between;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+#nav-part2 h4 {
+  padding: 10px 20px;
+  border: 1px solid rgb(99, 97, 97);
+  border-radius: 50px;
+  font-weight: 500;
+  color: black;
+  transition: all ease 0.4s;
+  position: relative;
+  font-size: 18px;
+  overflow: hidden;
+}
+#nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+}
+
+#nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+#nav-part2 h4 a {
+  text-decoration: none;
+  color: black;
+  z-index: 9;
+  position: relative;
+}
+
+#nav-part2 h4:hover a {
+  color: #efeae3;
+}
+
+#center {
+  height: 70vh;
+  width: 100%;
+  /* background-color: orangered; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(56, 53, 53);
+  padding-bottom: 2.5vw;
+}
+
+#left h3 {
+  width: 23vw;
+  font-size: 1.5vw;
+  line-height: 2vw;
+}
+
+#center h1 {
+  font-size: 9.5vw;
+  text-align: right;
+  line-height: 8vw;
+}
+
+#right h1 {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+#page1 video {
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 4vw;
+}
+
+#hero-shape {
+  position: absolute;
+  height: 36vw;
+  width: 46vw;
+  right: 0;
+  top: 6vh;
+}
+#hero-1 {
+  width: 36vw;
+  height: 36vw;
+  position: absolute;
+  background-color: orangered;
+  border-radius: 50%;
+  right: 0;
+  top: 73vh;
+  filter: blur(20px);
+}
+
+#hero-2 {
+  width: 36vw;
+  height: 36vw;
+  position: absolute;
+  background-color: orangered;
+  border-radius: 50%;
+  right: 0;
+  top: 73vh;
+  filter: blur(20px);
+  animation: anime;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#hero-3 {
+  width: 30vw;
+  height: 36vw;
+  position: absolute;
+  background-color: orangered;
+  border-radius: 50%;
+  right: 0;
+  top: 73vh;
+  filter: blur(20px);
+  animation: anime2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes anime {
+  from {
+    transform: translate(-30px, -30px);
+  }
+  to {
+    transform: translate(30px, 30px);
+  }
+}
+
+@keyframes anime2 {
+  from {
+    transform: translate(-20px, -20px);
+  }
+  to {
+    transform: translate(20px, 20px);
+  }
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: red; */
+}
+
+#moving-text {
+  overflow-x: auto;
+  /* background-color: lightblue; */
+  /* display: inline-block; */
+  white-space: nowrap;
+  margin: 2vw;
+}
+#moving-text::-webkit-scrollbar {
+  display: none;
+}
+#moving-text h1 {
+  font-size: 9vw;
+  display: inline-block;
+  /* background-color: yellow; */
+}
+
+.gola {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: orangered;
+  display: inline-block;
+}
+
+.con {
+  /* background-color: lightcoral; */
+  margin-bottom: 2px;
+  white-space: nowrap;
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+
+#page2-bottom {
+  height: 80vh;
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw;
+}
+
+#bottom-part2 img {
+  height: 30vh;
+}
+#bottom-part2 p {
+  width: 100%;
+}
+#bottom-part2 {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
